@@ -39,7 +39,7 @@
 	class:light-mode={$themeStore === 'light'}
 >
 	<h2 class="integration-title">
-		<span class="text-green-500">Slack and Discord integrations</span>
+		<span class="text-green-500">Slack and Discord integrations:</span>
 		<span class={$themeStore === 'dark' ? 'text-white' : 'text-gray-900'}
 			>Never miss an important foosball world event</span
 		>
