@@ -79,7 +79,7 @@
 		@apply bg-white;
 	}
 	.integration-container.dark-mode {
-		@apply bg-gray-900;
+		@apply bg-black;
 	}
 
 	.integration-title {

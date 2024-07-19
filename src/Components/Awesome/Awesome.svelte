@@ -60,7 +60,7 @@
 		@apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform duration-300 hover:transform hover:scale-105;
 	}
 	:global(.dark) .feature-card {
-		background-color: #1f2937; /* darker gray for dark mode */
+		background-color: #0a0a0a; /* darker gray for dark mode */
 		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 	}
 </style>
