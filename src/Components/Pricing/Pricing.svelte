@@ -80,7 +80,7 @@
 									clip-rule="evenodd"
 								/>
 							</svg>
-							And much more!
+							And much more
 						</li>
 					</ul>
 				</div>
