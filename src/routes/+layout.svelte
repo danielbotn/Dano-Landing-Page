@@ -3,6 +3,8 @@
 	import '../app.postcss';
 	import NavHeader from '../Components/NavHeader/NavHeader.svelte';
 	import './styles.css';
+
+	export const prerender = true;
 </script>
 
 <div class="app">
