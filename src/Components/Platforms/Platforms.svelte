@@ -61,13 +61,9 @@
 		</span>
 	</h2>
 
-	<p class="platforms-subtitle">
-		From pocket to desktop, Dano Foosball fits perfectly into your digital life
-	</p>
-
-	<p class="availability">
-		Available on iOS, Android, Desktop (Windows, macOS, Linux), and as a Web App on your favourite
-		browser.
+	<p class="text-xl text-center mb-8 text-gray-600 dark:text-gray-300">
+		From pocket to desktop, Dano Foosball fits perfectly into your digital life. Available on iOS,
+		Android, Desktop (Winsow, MacOS, Linux) and your favourite browser
 	</p>
 
 	<div class="platforms-showcase">
@@ -78,7 +74,7 @@
 					alt={platform.title}
 					class="platform-image"
 				/>
-				<h3>{platform.title}</h3>
+				<h3 class="text-gray-600 dark:text-gray-300">{platform.title}</h3>
 			</div>
 		{/each}
 	</div>
@@ -94,10 +90,6 @@
 	.platforms-container.light-mode {
 		--bg-color: white;
 		--text-color: #333;
-	}
-	.platforms-container.dark-mode {
-		--bg-color: black;
-		--text-color: white;
 	}
 
 	.platforms-title {
@@ -138,17 +130,5 @@
 		width: 80px;
 		height: 80px;
 		margin-bottom: 0.5rem;
-	}
-
-	.platform-item h3 {
-		font-size: 1rem;
-		font-weight: 600;
-		color: var(--title-color);
-	}
-	.platforms-container.light-mode .platform-item h3 {
-		--title-color: #333;
-	}
-	.platforms-container.dark-mode .platform-item h3 {
-		--title-color: #ccc;
 	}
 </style>
