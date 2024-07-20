@@ -1,6 +1,6 @@
 <script>
 	import { themeStore } from '$lib/stores/themeStore';
-	import slackLeagueDark from '../../lib/images/slack_league.png';
+	import slackLeagueDark from '$lib/images/slack_league.png';
 
 	import discordLeagueDark from '$lib/images/discord_league.png';
 	import discordMatchDark from '$lib/images/discord_match.png';
