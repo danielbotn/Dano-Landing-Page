@@ -36,8 +36,6 @@ jobs:
           static_site_generator: sveltekit
 
       - name: Build
-        env:
-          BASE_PATH: "/Dano-Landing-Page"
         run: npm run build
 
       - name: Upload Artifacts
