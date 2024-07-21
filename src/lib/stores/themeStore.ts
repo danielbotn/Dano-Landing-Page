@@ -11,7 +11,7 @@ interface ThemeStore {
 }
 
 function createThemeStore(): ThemeStore {
-  const { subscribe, set, update } = writable<Theme>("dark");
+  const { subscribe, set, update } = writable<Theme>("light");
 
   return {
     subscribe,
