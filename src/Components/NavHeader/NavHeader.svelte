@@ -21,9 +21,9 @@
 	class="lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2 dark:bg-black  border-gray-200 dark:border-gray-600"
 >
 	<div class="flex-1 flex justify-between items-center">
-		<a href="/">
-			<img src={DanoLogo} class="h-20 pt-6" alt="Dano Logo" />
-		</a>
+		
+		<img src={DanoLogo} class="h-20 pt-6" alt="Dano Logo" />
+		
 		<span
 			on:click={handleDarkModeClick}
 			on:keydown={(e) => e.key === 'Enter' && handleDarkModeClick()}
