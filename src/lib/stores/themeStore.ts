@@ -1,3 +1,4 @@
+// themeStore.ts
 import { writable, type Writable } from "svelte/store";
 import { browser } from "$app/environment";
 
@@ -11,7 +12,7 @@ interface ThemeStore {
 }
 
 function createThemeStore(): ThemeStore {
-  const { subscribe, set, update } = writable<Theme>("light");
+  const { subscribe, set, update } = writable<Theme>("dark"); // Set initial value to "dark"
 
   return {
     subscribe,
@@ -32,11 +33,12 @@ function createThemeStore(): ThemeStore {
     init: () => {
       if (browser) {
         const storedTheme = localStorage.getItem("color-theme") as Theme | null;
-        if (
-          storedTheme &&
-          (storedTheme === "light" || storedTheme === "dark")
-        ) {
+        if (storedTheme === "light" || storedTheme === "dark") {
           set(storedTheme);
+        } else {
+          // If no theme is stored, set it to dark and save in localStorage
+          localStorage.setItem("color-theme", "dark");
+          set("dark");
         }
       }
     },
