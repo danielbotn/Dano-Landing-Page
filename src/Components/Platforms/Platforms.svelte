@@ -55,7 +55,7 @@
 
 <div class="platforms-container">
 	<h2 class="platforms-title">
-		<span class="text-green-500">Foosball Everywhere:</span>
+		<span class="text-green-500 dark:text-logoDark">Foosball Everywhere:</span>
 		<span class={$themeStore === 'dark' ? 'text-white' : 'text-gray-900'}>
 			Your Game, Any Platform, Any Device
 		</span>
