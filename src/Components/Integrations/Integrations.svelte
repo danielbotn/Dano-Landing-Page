@@ -1,10 +1,10 @@
 <script>
 	import { themeStore } from '$lib/stores/themeStore';
-	import slackLeagueDark from '$lib/images/slack_league.png';
+	import slackLeagueDark from '$lib/images/slack_single_dark_mode.png';
 
 	import discordLeagueDark from '$lib/images/discord_league.png';
 	import discordMatchDark from '$lib/images/discord_match.png';
-	import slackLeagueLight from '$lib/images/slack_league_light_mode.png';
+	import slackLeagueLight from '$lib/images/slack_single_light_mode.png';
 	import discordLeagueLight from '$lib/images/discord_league_light_mode.png';
 	import discordMatchLight from '$lib/images/discord_match_light_mode.png';
 	import slackLogo from '$lib/images/slack_logo.png';
