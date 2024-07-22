@@ -16,7 +16,7 @@
 						<Dices size={64} color={iconColor} />
 					</div>
 					<div class="ms-6 sm:ms-8">
-						<h3 class="text-base sm:text-lg font-semibold text-green-500 dark:text-white">Flexible Match Modes</h3>
+						<h3 class="text-base sm:text-lg font-semibold dark:text-white">Flexible Match Modes</h3>
 						<p class="mt-1 text-gray-600 dark:text-gray-300">
 							Enjoy 1v1 duels or team up for 2v2 matches. Perfect for quick games or strategic team
 							play..
@@ -29,7 +29,7 @@
 						<Trophy size={64} color={iconColor} />
 					</div>
 					<div class="ms-6 sm:ms-8">
-						<h3 class="text-base sm:text-lg font-semibold text-green-500 dark:text-white">Competitive Leagues</h3>
+						<h3 class="text-base sm:text-lg font-semibold dark:text-white">Competitive Leagues</h3>
 						<p class="mt-1 text-gray-600 dark:text-gray-300">
 							Join or create leagues to compete with friends or colleagues. Climb the ranks and
 							become the foosball champion.
@@ -42,7 +42,7 @@
 						<FolderClock size={64} color={iconColor} />
 					</div>
 					<div class="ms-6 sm:ms-8">
-						<h3 class="text-base sm:text-lg font-semibold text-green-500 dark:text-white">Comprehensive History</h3>
+						<h3 class="text-base sm:text-lg font-semibold dark:text-white">Comprehensive History</h3>
 						<p class="mt-1 text-gray-600 dark:text-gray-300">
 							Track your progress with detailed match history and statistics. Analyze your
 							performance to improve your game.
@@ -58,7 +58,7 @@
 						<Slack size={64} color={iconColor} />
 					</div>
 					<div class="ms-6 sm:ms-8">
-						<h3 class="text-base sm:text-lg font-semibold text-green-500 dark:text-white">Seamless Integrations</h3>
+						<h3 class="text-base sm:text-lg font-semibold dark:text-white">Seamless Integrations</h3>
 						<p class="mt-1 text-gray-600 dark:text-gray-300">
 							Connect with Slack and Notion to share results, schedule matches, and keep your team
 							updated on the latest foosball action.
@@ -71,7 +71,7 @@
 						<Moon size={64} color={iconColor} />
 					</div>
 					<div class="ms-6 sm:ms-8">
-						<h3 class="text-base sm:text-lg font-semibold text-green-500 dark:text-white">Dark Mode</h3>
+						<h3 class="text-base sm:text-lg font-semibold dark:text-white">Dark Mode</h3>
 						<p class="mt-1 text-gray-600 dark:text-gray-300">
 							Easy on the eyes with our sleek dark mode. Perfect for late-night foosball strategy
 							planning or low-light environments.
@@ -84,7 +84,7 @@
 						<FileCog size={64} color={iconColor} />
 					</div>
 					<div class="ms-6 sm:ms-8">
-						<h3 class="text-base sm:text-lg font-semibold text-green-500 dark:text-white">Customizable Settings</h3>
+						<h3 class="text-base sm:text-lg font-semibold dark:text-white">Customizable Settings</h3>
 						<p class="mt-1 text-gray-600 dark:text-gray-300">
 							Tailor the app to your preferences. Adjust notifications, match rules, and more to
 							create your perfect foosball companion.
