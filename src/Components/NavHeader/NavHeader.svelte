@@ -1,5 +1,6 @@
 <script>
-    import DanoLogo from '$lib/images/dano-scaled.png';
+    import DanoLogo from '$lib/images/dano-green-2.png';
+	import DanoDark from '$lib/images/dano-scaled.png';
     import { DarkMode } from 'flowbite-svelte';
     import { themeStore } from '$lib/stores/themeStore';
     import { onMount } from 'svelte';
@@ -14,13 +15,16 @@
     onMount(() => {
         themeStore.init();
     });
+
+	// Reactive statement to select the appropriate logo based on the theme
+    $: logoSrc = $themeStore === 'dark' ? DanoDark : DanoLogo;
 </script>
 
 <header
     class="lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2 dark:bg-black  border-gray-200 dark:border-gray-600"
 >
     <div class="flex-1 flex justify-between items-center">
-        <img src={DanoLogo} class="h-20 pt-6" alt="Dano Logo" />
+        <img src={logoSrc} class="h-20 pt-6" alt="Dano Logo" />
         
         <span
             on:click={handleDarkModeClick}

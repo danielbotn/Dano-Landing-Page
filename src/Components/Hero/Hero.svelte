@@ -15,7 +15,7 @@
 				class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl text-center md:text-left px-4 md:px-0"
 			>
 				<div class="block xl:inline pr-0 md:pr-6 dark:text-white">Dano</div>
-				<div class="block text-logo dark:text-logoDark xl:inline">
+				<div class="block text-green-500 dark:text-logoDark xl:inline">
 					Your Digital foosball tracker for all your soccer table classics.
 				</div>
 			</h1>
