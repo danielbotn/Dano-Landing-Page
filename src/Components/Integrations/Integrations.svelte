@@ -53,21 +53,28 @@
 
 	<div class="integration-showcase">
 		{#each integrations as item, index}
-			<div
-				class="integration-item"
-				on:mouseenter={() => (hoveredIndex = index)}
-				on:mouseleave={() => (hoveredIndex = -1)}
-			>
-				<img
-					src={$themeStore === 'dark' ? item.darkImg : item.lightImg}
-					alt={item.title}
-					class="integration-image"
-				/>
-				<div class="integration-info" class:show={hoveredIndex === index}>
-					<h3>{item.title}</h3>
-					<p>{item.desc}</p>
-				</div>
+		<div
+			class="integration-item"
+			on:mouseenter={() => (hoveredIndex = index)}
+			on:mouseleave={() => (hoveredIndex = -1)}
+			role="button"
+			tabindex="0"
+			on:keydown={(e) => {
+				if (e.key === 'Enter' || e.key === ' ') {
+					hoveredIndex = hoveredIndex === index ? -1 : index;
+				}
+			}}
+		>
+			<img
+				src={$themeStore === 'dark' ? item.darkImg : item.lightImg}
+				alt={item.title}
+				class="integration-image"
+			/>
+			<div class="integration-info" class:show={hoveredIndex === index}>
+				<h3>{item.title}</h3>
+				<p>{item.desc}</p>
 			</div>
+		</div>
 		{/each}
 	</div>
 </div>

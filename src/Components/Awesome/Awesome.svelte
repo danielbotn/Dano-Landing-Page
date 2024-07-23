@@ -24,7 +24,7 @@
 			class="w-48 h-auto mb-6 mx-auto"
 		/>
 		<h3 class="text-xl font-bold mb-2 dark:text-white">Comprehensive Match History</h3>
-		<p class="text-gray-600 dark:text-gray-300">
+		<p class="text-gray-600 dark:text-gray-300 text-left">
 			Keep track of all your foosball games. View detailed match reports, scores, and player
 			statistics. Analyze your performance and track your progress over time.
 		</p>
@@ -36,7 +36,7 @@
 			class="w-48 h-auto mb-6 mx-auto"
 		/>
 		<h3 class="text-xl font-bold mb-2 dark:text-white">Exciting Foosball Leagues</h3>
-		<p class="text-gray-600 dark:text-gray-300">
+		<p class="text-gray-600 dark:text-gray-300 text-left">
 			Create and manage foosball leagues with ease. Set up tournaments, track standings, and crown
 			champions. Perfect for office competitions or friendly rivalries.
 		</p>
@@ -48,7 +48,7 @@
 			class="w-48 h-auto mb-6 mx-auto"
 		/>
 		<h3 class="text-xl font-bold mb-2 dark:text-white">Versatile Game Modes</h3>
-		<p class="text-gray-600 dark:text-gray-300">
+		<p class="text-gray-600 dark:text-gray-300 text-left">
 			Enjoy both 1vs1 and 2vs2 matches. Challenge a single opponent or team up with a partner for
 			thrilling doubles action. Customize game rules to suit your style.
 		</p>
@@ -56,11 +56,11 @@
 </div>
 
 <style>
-	.feature-card {
-		@apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform duration-300 hover:transform hover:scale-105;
-	}
-	:global(.dark) .feature-card {
-		background-color: #0a0a0a; /* darker gray for dark mode */
-		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-	}
+    .feature-card {
+        @apply bg-[rgb(248,248,248)] dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform duration-300 hover:transform hover:scale-105;
+    }
+    :global(.dark) .feature-card {
+        background-color: #0a0a0a; /* darker gray for dark mode */
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
 </style>
