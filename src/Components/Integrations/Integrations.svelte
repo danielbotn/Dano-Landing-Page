@@ -122,10 +122,6 @@
     @apply text-lg font-semibold mb-2;
 	}
 
-	.light-mode .integration-info h3 {
-		@apply text-green-500;
-	}
-
 	.dark-mode .integration-info h3 {
 		@apply text-white;
 	}
