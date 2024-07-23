@@ -20,17 +20,16 @@
     $: logoSrc = $themeStore === 'dark' ? DanoDark : DanoLogo;
 </script>
 
-<header
-    class="lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2 dark:bg-black  border-gray-200 dark:border-gray-600"
->
+<header class="xl:px-96 px-2 bg-white flex flex-wrap items-center lg:py-0 py-2 dark:bg-black border-gray-200 dark:border-gray-600">
     <div class="flex-1 flex justify-between items-center">
-        <img src={logoSrc} class="h-20 pt-6" alt="Dano Logo" />
+        <img src={logoSrc} class="h-20 pt-4 pb-4 ml-2 xl:ml-10 2xl:ml-24" alt="Dano Logo" />
         
         <span
             on:click={handleDarkModeClick}
             on:keydown={(e) => e.key === 'Enter' && handleDarkModeClick()}
             tabindex="0"
             role="button"
+            class="mr-2 xl:mr-10 2xl:mr-24"
         >
             <DarkMode class={btnClass} storage="local" />
         </span>

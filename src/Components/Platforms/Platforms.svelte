@@ -83,7 +83,7 @@
 <style>
 	.platforms-container {
 		width: 100%;
-		padding: 4rem 1rem;
+		padding: 1rem 1rem;
 		background-color: var(--bg-color);
 		color: var(--text-color);
 	}
