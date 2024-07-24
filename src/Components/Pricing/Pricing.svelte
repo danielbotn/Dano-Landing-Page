@@ -39,9 +39,9 @@
 		  description="Basic access to features"
 		  features={freeFeatures}
 		  buttonText="Download Now"
-		  lightBgColor="bg-white"
+		  lightBgColor="bg-[#1e293b]"
 		  darkBgColor="bg-[#1e293b]"
-		  lightTextColor="text-gray-900"
+		  lightTextColor="text-white"
 		  darkTextColor="text-white"
 		  accentColor="text-green-500"
 		  borderColor="border-green-500"
