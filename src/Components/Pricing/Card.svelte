@@ -14,6 +14,7 @@
     export let buttonHoverColor = "hover:bg-blue-600";
     export let isFeature = false;
     export let image = null;
+    export let buttonTextColor = "text-white";
   </script>
   
   <div
@@ -41,9 +42,9 @@
       </ul>
     </div>
     <button
-      on:click={buttonAction}
-      class="{buttonColor} text-white font-semibold py-2 px-4 rounded-lg {buttonHoverColor} transition duration-300"
-    >
-      {buttonText}
-    </button>
+        on:click={buttonAction}
+        class="{buttonColor} {buttonTextColor} font-semibold py-2 px-4 rounded-lg {buttonHoverColor} transition duration-300"
+  >
+    {buttonText}
+  </button>
   </div>

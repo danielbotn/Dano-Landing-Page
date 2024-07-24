@@ -60,9 +60,10 @@
 		  darkTextColor="text-[#4B3621]"
 		  accentColor="text-[#B8860B]"
 		  borderColor="border-[#B8860B]"
-		  buttonColor="bg-[#B8860B]"
+		  buttonColor="bg-[#FFDE00]"
 		  buttonHoverColor="hover:bg-[#9B7506]"
 		  isFeature={true}
+		  buttonTextColor="text-black"
 		/>
   
 		<Card
