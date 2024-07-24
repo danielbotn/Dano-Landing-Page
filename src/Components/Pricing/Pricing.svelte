@@ -35,7 +35,7 @@
   
 	  <div class="flex flex-col md:flex-row justify-center items-stretch gap-8">
 		<Card
-		  title="Free Forever"
+		  title="Free Forever."
 		  description="Basic access to features"
 		  features={freeFeatures}
 		  buttonText="Download Now"
