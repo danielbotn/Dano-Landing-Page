@@ -60,7 +60,7 @@
 					<div class="ms-6 sm:ms-8">
 						<h3 class="text-base sm:text-lg font-semibold dark:text-white">Seamless Integrations</h3>
 						<p class="mt-1 text-gray-600 dark:text-gray-300">
-							Connect with Slack and Notion to share results, schedule matches, and keep your team
+							Connect with Slack and Discord to share results, schedule matches, and keep your team
 							updated on the latest foosball action.
 						</p>
 					</div>

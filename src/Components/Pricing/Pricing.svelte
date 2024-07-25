@@ -5,8 +5,8 @@
   
 	const freeFeatures = [
 	  'Unlimited games',
-	  '4 Players',
-	  '2 Leagues'
+	  '7 Players',
+	  '3 Leagues'
 	];
   
 	const premiumFeatures = [
