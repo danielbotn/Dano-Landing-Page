@@ -1,7 +1,8 @@
 <script>
+	import { Carousel } from 'flowbite-svelte';
 	import { themeStore } from '$lib/stores/themeStore';
+	import { derived } from 'svelte/store';
 	import slackLeagueDark from '$lib/images/slack_single_dark_mode.png';
-
 	import discordLeagueDark from '$lib/images/discord_league.png';
 	import discordMatchDark from '$lib/images/discord_match.png';
 	import slackLeagueLight from '$lib/images/slack_single_light_mode.png';
@@ -9,10 +10,21 @@
 	import discordMatchLight from '$lib/images/discord_match_light_mode.png';
 	import slackLogo from '$lib/images/slack_logo.png';
 	import discordLogo from '$lib/images/discord_logo.png';
+	import teamsLogo from '$lib/images/teams.png';
+
+	// Teams images
+	import teamsPicOne from '$lib/images/teams_docs/teams_light_freehand_game.png';
+	import teamsPicTwo from '$lib/images/teams_docs/teams_light_freehand_double_game.png';
+	import teamsPicThree from '$lib/images/teams_docs/teams_light_single_league.png';
+	import teamsPicFour from '$lib/images/teams_docs/teams_light_double_league.png';
+	import teamsPicOneDark from '$lib/images/teams_docs/teams_dark_freehand_game.png';
+	import teamsPicTwoDark from '$lib/images/teams_docs/teams_dark_freehand_double_game.png';
+	import teamsPicThreeDark from '$lib/images/teams_docs/teams_dark_single_league.png';
+	import teamsPicFourDark from '$lib/images/teams_docs/teams_dark_double_league.png';
 
 	let hoveredIndex = -1;
 
-	const integrations = [
+	const slackDiscordIntegrations = [
 		{
 			darkImg: slackLeagueDark,
 			lightImg: slackLeagueLight,
@@ -32,6 +44,24 @@
 			desc: 'Instant results and leaderboard updates'
 		}
 	];
+
+	const teamsImagesData = [
+		{ lightImg: teamsPicOne, darkImg: teamsPicOneDark },
+		{ lightImg: teamsPicTwo, darkImg: teamsPicTwoDark },
+		{ lightImg: teamsPicThree, darkImg: teamsPicThreeDark },
+		{ lightImg: teamsPicFour, darkImg: teamsPicFourDark }
+	];
+
+	$: teamsImages = derived(themeStore, ($themeStore) => 
+		teamsImagesData.map(img => ({
+			imgurl: $themeStore === 'dark' ? img.darkImg : img.lightImg,
+			alt: 'Teams integration feature'
+		}))
+	);
+
+	let showThumbs = false;
+	let showCaptions = false;
+	let slideControls = false;
 </script>
 
 <div
@@ -40,7 +70,7 @@
 	class:light-mode={$themeStore === 'light'}
 >
 	<h2 class="integration-title">
-		<span class="text-green-500 dark:text-logoDark">Slack and Discord integrations:</span>
+		<span class="text-green-500 dark:text-logoDark">Slack, Discord, and Teams integrations:</span>
 		<span class={$themeStore === 'dark' ? 'text-white' : 'text-gray-900'}
 			>Never miss an important foosball world event</span
 		>
@@ -49,10 +79,11 @@
 	<div class="logo-container">
 		<img src={slackLogo} alt="Slack Logo" class="integration-logo slack-logo" />
 		<img src={discordLogo} alt="Discord Logo" class="integration-logo discord-logo" />
+		<img src={teamsLogo} alt="Microsoft Teams Logo" class="integration-logo teams-logo" />
 	</div>
 
 	<div class="integration-showcase">
-		{#each integrations as item, index}
+		{#each slackDiscordIntegrations as item, index}
 		<div
 			class="integration-item"
 			on:mouseenter={() => (hoveredIndex = index)}
@@ -77,6 +108,18 @@
 		</div>
 		{/each}
 	</div>
+
+	<div class="teams-carousel">
+		<h2 class="integration-title">
+			<span class="text-green-500 dark:text-logoDark">Microsoft Teams</span>
+			<span class={$themeStore === 'dark' ? 'text-white' : 'text-gray-900'}
+				>integration finally here</span
+			>
+		</h2>
+		<div class="flex justify-center">
+			<Carousel images={$teamsImages} loop {showCaptions} {showThumbs} duration={3000} {slideControls} />
+		</div>
+	</div>
 </div>
 
 <style>
@@ -95,7 +138,7 @@
 	}
 
 	.integration-showcase {
-		@apply flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0;
+		@apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center;
 	}
 
 	.integration-item {
@@ -126,7 +169,7 @@
 	}
 
 	.integration-info h3 {
-    @apply text-lg font-semibold mb-2;
+		@apply text-lg font-semibold mb-2;
 	}
 
 	.dark-mode .integration-info h3 {
@@ -168,9 +211,16 @@
 		animation-delay: 0.5s;
 	}
 
+	.discord-logo {
+		animation-delay: 1s;
+	}
+
+	.teams-logo {
+		animation-delay: 1.5s;
+	}
+
 	@keyframes float {
-		0%,
-		100% {
+		0%, 100% {
 			transform: translateY(0);
 		}
 		50% {
@@ -179,8 +229,7 @@
 	}
 
 	@keyframes pulse {
-		0%,
-		100% {
+		0%, 100% {
 			transform: scale(1);
 		}
 		50% {
@@ -190,5 +239,29 @@
 
 	.logo-container:hover .integration-logo {
 		animation: pulse 0.5s ease-in-out infinite;
+	}
+
+	.teams-carousel {
+		@apply mt-16 max-w-2xl mx-auto;
+	}
+
+	.teams-title {
+		@apply text-2xl font-bold text-center mb-8;
+	}
+
+	.dark-mode .teams-title {
+		@apply text-white;
+	}
+
+	.light-mode .teams-title {
+		@apply text-gray-900;
+	}
+
+	:global(.teams-carousel img) {
+		@apply rounded-lg shadow-lg;
+	}
+
+	:global(.carousel-dots) {
+		@apply flex justify-center mt-4;
 	}
 </style>
