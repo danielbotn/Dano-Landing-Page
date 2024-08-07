@@ -10,7 +10,7 @@
 
 <div class="container mx-auto px-4 py-4">
 	<h2
-		class="text-3xl md:text-4xl font-extrabold text-center mb-12 text-green-500 dark:text-logoDark"
+		class="text-5xl md:text-5xl font-extrabold text-center mb-12 text-green-500 dark:text-logoDark"
 	>
 		What's Awesome About <span class="text-gray-900 dark:text-white">Dano</span> Foosball?
 	</h2>
