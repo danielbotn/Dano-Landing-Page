@@ -88,6 +88,6 @@
   
   <style>
 	.integration-title {
-	  @apply text-4xl md:text-5xl font-extrabold text-center mb-16;
+	  @apply text-3xl md:text-5xl font-extrabold text-center mb-16;
 	}
   </style>
