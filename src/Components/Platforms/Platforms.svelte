@@ -93,10 +93,7 @@
 	}
 
 	.platforms-title {
-		font-size: 2.5rem;
-		font-weight: 800;
-		text-align: center;
-		margin-bottom: 1rem;
+		@apply text-3xl md:text-5xl font-extrabold text-center mb-16;
 	}
 
 	.platforms-subtitle {
