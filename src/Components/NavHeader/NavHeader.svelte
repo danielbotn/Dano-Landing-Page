@@ -30,7 +30,7 @@
 				on:keydown={(e) => e.key === 'Enter' && handleDarkModeClick()}
 				tabindex="0"
 				role="button"
-				class="mr-2 xl:mr-10 2xl:mr-24"
+				class="mr-3 xl:mr-10 2xl:mr-24"
 			>
 				<DarkMode class={btnClass} storage="local" />
 			</span>
