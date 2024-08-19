@@ -3,10 +3,22 @@
 	import '../app.postcss';
 	import NavHeader from '../Components/NavHeader/NavHeader.svelte';
 	import SpaceBackground from '../Components/SpaceBackground/SpaceBackground.svelte';
+	import SpaceBackgroundTwo from '../Components/SpaceBackground/SpaceBackgroundTwo.svelte';
+	import SpaceBackgroundThree from '../Components/SpaceBackground/SpaceBackgroundThree.svelte';
+	import SpaceBackgroundFour from '../Components/SpaceBackground/SpaceBackgroundFour.svelte';
 	import { themeStore } from '$lib/stores/themeStore';
 	import './styles.css';
 
 	export const prerender = true;
+
+	// Array of background components
+	const backgrounds = [SpaceBackground, SpaceBackgroundTwo, SpaceBackgroundThree, SpaceBackgroundFour];
+
+	// Reactive declaration to pick a random background
+	let SelectedBackground;
+	$: if ($themeStore === 'dark') {
+		SelectedBackground = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+	}
 </script>
 
 <div class="app">
@@ -14,7 +26,7 @@
 
 	<main>
 		{#if $themeStore === 'dark'}
-			<SpaceBackground />
+			<svelte:component this={SelectedBackground} />
 		{/if}
 		<slot />
 	</main>
